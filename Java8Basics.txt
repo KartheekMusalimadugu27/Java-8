@@ -1,0 +1,59 @@
+What is a lambda expression?#
+
+Java is an object-oriented language. By introducing lambdas in Java 8, the authors of Java tried to add elements of 
+functional programming in Java. 
+
+Now you might be wondering what the difference between object-oriented programming and functional programming is?
+
+In object-oriented programming, objects and classes are the main entities. If we create a function then it should exist within a class. 
+A function has no meaning outside the scope of the class object.
+
+In functional programming, functions can exist outside the scope of an object. We can assign them to a reference variable and we can also 
+pass them to other methods as a parameter.
+
+A lambda expression is just an anonymous function, i.e., a function with no name and that is not bound to an identifier. We can pass it 
+to other methods as parameters, therefore, using the power of functional programming in Java.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+The Predicate<T> interface has an abstract method boolean test(T t). Basically, a predicate is a function that 
+evaluates the given input and returns true or false.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Supplier is an interface that does not take in any argument but produces a value when the get() function is invoked. 
+Suppliers are useful when we don’t need to supply any value and obtain a result at the same time.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Consumer<T>#
+This interface takes a parameter of type T and does not return anything.
+
+A consumer can be used in all contexts where an object needs to be consumed,i.e. taken as input, and some operation is 
+performed on the object without returning any result.
+
+Below is the list of methods in the Consumer interface. Consumer<T> has an abstract method accept() and a default method 
+called andThen(), which is used for chaining.
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Function<T, R>
+R apply(T t)
+compose(Function<? super V, ? extends T> before)
+andThen(Function<? super R,? extends V> after)
+BiFunction<T,U,R>
+
+Function is a category of functional interfaces that takes an object of type T and returns an object of type R.
+
+Until now, the functional interfaces that we’ve discussed have either not taken any argument(Supplier), not returned 
+any value(Consumer), or returned only a boolean(Predicate).
+
+Function interfaces are very useful as we can specify the type of input and output.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+R apply(T t)#
+This is the abstract method of the Function interface. It takes one argument of type T as input and returns a value of type R.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
