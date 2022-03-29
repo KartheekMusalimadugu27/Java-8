@@ -2,6 +2,7 @@ package learn.java.function;
 
 import java.util.function.Function;
 
+
 public class FunctionInterfaceDemo1 {
 
     public static void main(String[] args) {

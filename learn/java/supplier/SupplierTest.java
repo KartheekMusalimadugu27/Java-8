@@ -3,6 +3,7 @@ package learn.java.supplier;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
+
 public class SupplierTest {
     static boolean isPersonEligibleForVoting(
         Supplier<Person> supplier, Predicate<Person> predicate) {
