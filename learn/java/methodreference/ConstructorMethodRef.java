@@ -19,26 +19,26 @@ public class ConstructorMethodRef {
 
         // Code without constructor reference
         list.stream()
-                .map(name -> new Employee(name))
+                .map(name -> new Employee1(name, 0, 0))
                 .forEach(System.out::println);
 
         // Code with constructor reference
         list.stream()
-                .map(Employee::new)
+                .map(Employee1::new)
                 .forEach(System.out::println);
     }
 }
 
-class Employee {
+class Employee1 {
     String name;
     int age;
     int salary;
 
-    Employee(String name) {
+    Employee1(String name) {
         this.name = name;
     }
 
-    Employee(String name, int age, int salary) {
+    Employee1(String name, int age, int salary) {
         this.name = name;
         this.age = age;
         this.salary = salary;

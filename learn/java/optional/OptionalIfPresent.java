@@ -5,13 +5,13 @@ import java.util.Map;
 import java.util.Optional;
 
 public class OptionalIfPresent {
-    Map<Integer, Employee> empMap = new HashMap<>();
+    Map<Integer, Employee2> empMap = new HashMap<>();
 
     public void populateEmployee() {
-        empMap.put(123, new Employee("Alex", 23, 12000));
+        empMap.put(123, new Employee2("Alex", 23, 12000));
     }
 
-    public Optional<Employee> getEmployee(Integer employeeId) {
+    public Optional<Employee2> getEmployee(Integer employeeId) {
         // Before returning the employee object we are wrapping it into an Optional
         return Optional.ofNullable(empMap.get(employeeId));
     }
@@ -19,21 +19,21 @@ public class OptionalIfPresent {
     public static void main(String[] args) {
         OptionalIfPresent demo = new OptionalIfPresent();
         demo.populateEmployee();
-        Optional<Employee> emp = demo.getEmployee(123);
+        Optional<Employee2> emp = demo.getEmployee(123);
         emp.ifPresent(System.out::println);
     }
 }
 
-class Employee {
+class Employee2 {
     String name;
     int age;
     int salary;
 
-    Employee(String name) {
+    Employee2(String name) {
         this.name = name;
     }
 
-    Employee(String name, int age, int salary) {
+    Employee2(String name, int age, int salary) {
         this.name = name;
         this.age = age;
         this.salary = salary;
