@@ -19,7 +19,7 @@ public class ConstructorMethodRef {
 
         // Code without constructor reference
         list.stream()
-                .map(name -> new Employee1(name, 0, 0))
+                .map(name -> new Employee1(name))
                 .forEach(System.out::println);
 
         // Code with constructor reference

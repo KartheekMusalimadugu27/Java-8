@@ -25,6 +25,8 @@ public class StreamFlatMapDemo {
         list.add(Arrays.asList("d","e","f"));
         list.add(Arrays.asList("g","h","i"));
         list.add(Arrays.asList("j","k","l"));
+        
+        System.out.println(list);
         //Created a stream from the list.
         Stream<List<String>> stream1 = list.stream();
         // Flattened the stream.
