@@ -20,6 +20,7 @@ public class PredicateAndDemo {
 
         boolean eligible = isPersonEligibleForMembership(person , predicate);
         System.out.println("Person is eligible for membership: " + eligible);
+        
     }
 }
 
